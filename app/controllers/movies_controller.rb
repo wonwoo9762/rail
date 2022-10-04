@@ -7,16 +7,9 @@ class MoviesController < ApplicationController
     end
   
     def index
-      puts "hello world"
-      puts params
-      
       @all_ratings =  Movie.all_ratings
       @param_ratings =  params[:ratings].nil? ? {} : params[:ratings]
       @ratings_to_show = params[:ratings].nil? ?  @all_ratings : params[:ratings].keys ;
-      puts @all_ratings
-      puts @param_ratings
-      puts @ratings_to_show
-      puts "bye world"
   
       @sort = params[:sort].nil? ? "" : params[:sort]    
       unless (params[:sort].present? && params[:ratings].present?)
