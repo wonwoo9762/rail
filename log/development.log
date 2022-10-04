@@ -2100,3 +2100,100 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (2.5ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 136.25.185.122 at 2022-10-04 00:34:56 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to https://visachannel-sierrabicycle-3000.codio.io/movies?ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG-13%5D=1&sort=title" for 136.25.185.122 at 2022-10-04 00:34:56 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG-13"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 204ms (Views: 199.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?ratings%5BPG-13%5D=1&sort=title" for 136.25.185.122 at 2022-10-04 00:35:03 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG-13"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'PG-13'  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&sort=title&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 136.25.185.122 at 2022-10-04 00:35:05 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "sort"=>"title", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (1.7ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 136.25.185.122 at 2022-10-04 00:35:07 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (1.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (22.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/10" for 136.25.185.122 at 2022-10-04 00:35:14 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered movies/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/movies/10" for 136.25.185.122 at 2022-10-04 00:35:18 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uGQILN0cqA8zGJHifBq3QklztrMyhivyCBd+K70LbvtEUZZDGsvswxCLsH/IpKZs9Xz4WyeMdxBQQmcgYc6OkQ==", "id"=>"10"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 10]]
+  [1m[35m (63.2ms)[0m  commit transaction
+Redirected to https://visachannel-sierrabicycle-3000.codio.io/movies
+Completed 302 Found in 66ms (ActiveRecord: 63.6ms)
+
+
+Started GET "/movies" for 136.25.185.122 at 2022-10-04 00:35:18 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://visachannel-sierrabicycle-3000.codio.io/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 136.25.185.122 at 2022-10-04 00:35:18 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 136.25.185.122 at 2022-10-04 00:35:21 +0000
+Cannot render console from 136.25.185.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.4ms)
